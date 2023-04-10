@@ -1,17 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+function BookLibrary() {
+  return <section>
+   <Book/>
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+  </section>
+}
+//This is the first tutorial
+const Book=()=>{
+  return (
+  <article>
+    
+    <Image />
+    <Author/>
+    </article>
+    );
+};
+const Image=()=><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1tpCF5wVNYHw_PW2F1gJm83cj0oZoyk6Dtw&usqp=CAU" alt=""/>
+const Author=()=>{
+  return <h1>Jefferson Cowie</h1>
+}
+ReactDOM.render(<BookLibrary />, document.getElementById("root"));
